@@ -3,9 +3,9 @@ import socket
 import time
 import os
 
-FOLDER = "/Users/sanchitaarora/Documents/documents/socket_server/adc_files"
+FOLDER = "sample_files"
 HOST = '127.0.0.1'
-PORT = 12345
+PORT = 98765
 
 def list_files():
     return [f for f in os.listdir(FOLDER) if f.endswith('.txt')]
@@ -15,9 +15,9 @@ def main():
     print("Available files:")
     for i, f in enumerate(files):
         print(f"{i+1}. {f}")
-    idx = int(input("Select file number: ")) - 1
+    idx = int(input("Select the file number: ")) - 1
     filename = os.path.join(FOLDER, files[idx])
-    interval = float(input("Enter time per sample in ms (e.g., 20): ")) / 1000.0
+    interval = float(input("Enter time per sample in ms (e.g., 10): ")) / 1000.0
 
     with open(filename, 'r') as f:
         data = [line.strip().split(":")[-1] for line in f.readlines()]
@@ -34,7 +34,7 @@ def main():
         time.sleep(interval)
 
     conn.close()
-    print("Transmission finished.")
+    print("Successful Transmission")
 
 if __name__ == "__main__":
     main()
