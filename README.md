@@ -6,9 +6,6 @@ This project demonstrates a real-time ADC (Analog-to-Digital Converter) signal v
 2. Client-side dynamic plotting of ADC signal values
 3. Easy integration with different ADC data files
 4. Modular Python code for both server and client
-   
-# Motivation
-During my internship at GS Co., Ltd., South Korea, I worked on signal processing techniques including FIR and FFT algorithms for noise reduction in load cell sensors. This project simulates ADC data streaming and visualization as part of the internship's practical applications.
 
 # Technologies Used
 1. Python 3.x
