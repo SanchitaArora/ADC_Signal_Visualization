@@ -3,12 +3,11 @@ import threading
 import tkinter as tk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg 
 from matplotlib.figure import Figure
-# Client.py
-# This script connects to a server, receives ADC data, and plots it in real-time using Tkinter and Matplotlib.
+
 import matplotlib.pyplot as plt
 
 HOST = '127.0.0.1'
-PORT = 12345
+PORT = 98765
 data_points = []
 
 def receive_data():
